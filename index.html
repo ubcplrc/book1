@@ -3,14 +3,22 @@
   <head>
     <title>Book1</title>
     <script>
-      function body_loaded(){
-        var pwd = prompt('Password?');
+      async function body_loaded(){
+        var pwd = prompt('Password?').trim();
+        if(!pwd)return;
+
+        var resp = await fetch(location.origin+'/'+pwd+'.json');
+        var roleData = await resp.json();
+        console.log(roleData);
       }
     </script>
     <style>
       body{
         font-family:system-ui;
         direction:rtl;
+      }
+      main{
+        display:none;
       }
     </style>
   </head>
