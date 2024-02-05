@@ -4,10 +4,15 @@
     <title>Book1</title>
     <script>
       async function body_loaded(){
-        var pwd = prompt('Password?').trim();
+        var pwd = prompt('Password?');
         if(!pwd)return;
+        else{
+          pwd = pwd.trim();
+          if(!pwd)return;
+        }
 
         var resp = await fetch(location.origin+'/'+pwd+'.json');
+        console.log(resp);
         var roleData = await resp.json();
         console.log(roleData);
       }
