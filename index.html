@@ -11,7 +11,7 @@
           if(!pwd)return;
         }
 
-        var resp = await fetch(location.origin+'/'+pwd+'.json');
+        var resp = await fetch(location.origin+'/book1/'+pwd+'.json');
         console.log(resp);
         var roleData = await resp.json();
         console.log(roleData);
