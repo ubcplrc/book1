@@ -16,7 +16,7 @@
         var roleData = await resp.json();
         console.log(roleData);
 
-        document.getElementsByTagName('MAIN')[0].style.display = '';
+        document.getElementsByTagName('MAIN')[0].hidden = false;
       }
     </script>
     <style>
@@ -24,16 +24,13 @@
         font-family:system-ui;
         direction:rtl;
       }
-      main{
-        display:none;
-      }
     </style>
   </head>
   <body onload="body_loaded()">
     <header>
       <h1>کتاب اول</h1>
     </header>
-    <main>
+    <main hidden>
       املاک رابینسون
 
 خواب دیدم آفتاب دارد پایم را می‌سوزاند. انگشت شستم را فروکردم در
