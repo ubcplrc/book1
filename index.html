@@ -19,10 +19,10 @@
         */
         document.getElementsByTagName('MAIN')[0].hidden = false;
       }
-      function search(){
-        document.getElementById('result').innerHTML = 'درنگ نمایید ...';        
+      function search(){    
         var word = document.getElementById('word').value.trim();
         if(!word)return;
+        document.getElementById('result').innerHTML = 'درنگ نمایید ...'; 
         //google.script.run.withSuccessHandler(onSuccess).getWord(word);
         var k = Object.keys(shekar).indexOf(word);
         if(k != -1){
