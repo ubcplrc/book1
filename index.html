@@ -28,6 +28,7 @@
           for(k in shekar[word])html += '<div>' + '<strong>' + k + ':</strong> ' + shekar[word][k] + '</div>';
           document.getElementById('result').innerHTML = html;
         }
+        else document.getElementById('result').innerHTML = '<strong>' + word + '</strong> :یافت نشد!';
       }
       function clearResult(){
          document.getElementById('result').innerHTML = ''; 
