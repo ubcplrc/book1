@@ -25,7 +25,7 @@
         var k = Object.keys(shekar).indexOf(word);
         if(k != -1){
           var html = '';
-          for(k in shekar[word])html += '<div>' + shekar[word][k] + '<strong>:' + k + '</strong></div>';
+          for(k in shekar[word])html += '<div>' + '<strong>:' + k + '</strong>' + shekar[word][k] + '</div>';
           document.getElementById('result').innerHTML = html;
         }
       }
