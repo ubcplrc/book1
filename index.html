@@ -3,6 +3,7 @@
   <head>
     <title>واژه پیدا</title>
     <script>
+      const keys = ['مثال','معادل انگلیسی','تلفظ','منبع','معنی واژه','واژه'];
       async function body_loaded(){
         /*
         var pwd = prompt('Password?');
@@ -26,7 +27,7 @@
         var k = Object.keys(shekar).indexOf(word);
         if(k != -1){
           var html = '';
-          for(k in shekar[word])html += '<div>' + '<strong>' + k + ':</strong> ' + shekar[word][k] + '</div>';
+          for(k in keys)html += '<div>' + '<strong>' + k + ':</strong> ' + shekar[word][k] + '</div>';
           document.getElementById('result').innerHTML = html;
         }
         else document.getElementById('result').innerHTML = '<strong>' + word + ' </strong> یافت نشد!';
