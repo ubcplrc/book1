@@ -23,7 +23,11 @@
         var word = document.getElementById('word').value;
         //google.script.run.withSuccessHandler(onSuccess).getWord(word);
         var k = Object.keys(shekar).indexOf(word);
-        if(k != -1)document.getElementById('result').innerHTML = JSON.stringify(shekar[word]);
+        if(k != -1){
+          var html = '';
+          for(k in shekar[word])html += '<div>' + shekar[word][k] + '<strong>:' + k + '</strong></div>';
+          document.getElementById('result').innerHTML = html;
+        }
       }
       function clearResult(){
          document.getElementById('result').innerHTML = ''; 
