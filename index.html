@@ -22,7 +22,8 @@
         document.getElementById('result').innerHTML = 'درنگ نمایید ...';        
         var word = document.getElementById('word').value;
         //google.script.run.withSuccessHandler(onSuccess).getWord(word);
-        document.getElementById('result').innerHTML = word;
+        var k = Object.keys(shekar).indexOf(word);
+        if(k <> -1)document.getElementById('result').innerHTML = shekar[word];
       }
       function clearResult(){
          document.getElementById('result').innerHTML = ''; 
@@ -41,10 +42,10 @@
       <h1>واژه پیدا 1.0</h1>
     </header>
     <main hidden>
-      <form onsubmit="search()" style="direction:rtl;font-family:system-ui;font-size:x-large">
+      <form style="direction:rtl;font-family:system-ui;font-size:x-large">
         <label for="word">واژه:</label>
         <input id="word" size="15" oninput="clearResult()" style="direction:rtl;font-family:system-ui;font-size:large">
-        <input type="submit" value="بیاب" style="font-family:system-ui;font-size:large">
+        <input type="button" value="بیاب" onclick="search()" style="font-family:system-ui;font-size:large">
         <p id="result"></p>
       </form>      
     </main>
