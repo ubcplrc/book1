@@ -18,6 +18,15 @@
 
         document.getElementsByTagName('MAIN')[0].hidden = false;
       }
+      function search(){
+        document.getElementById('result').innerHTML = 'درنگ نمایید ...';        
+        var word = document.getElementById('word').value;
+        //google.script.run.withSuccessHandler(onSuccess).getWord(word);
+        document.getElementById('result').innerHTML = word;
+      }
+      function clearResult(){
+         document.getElementById('result').innerHTML = ''; 
+      }      
     </script>
     <script src="Shekar.js"></script>
     <style>
@@ -32,7 +41,12 @@
       <h1>واژه پیدا 1.0</h1>
     </header>
     <main hidden>
-      
+      <form onsubmit="search()" style="direction:rtl;font-family:system-ui;font-size:x-large">
+        <label for="word">واژه:</label>
+        <input id="word" size="15" oninput="clearResult()" style="direction:rtl;font-family:system-ui;font-size:large">
+        <input type="submit" value="بیاب" style="font-family:system-ui;font-size:large">
+        <p id="result"></p>
+      </form>      
     </main>
   </body>
 </html>
