@@ -27,7 +27,7 @@
         var k = Object.keys(shekar).indexOf(word);
         if(k != -1){
           var html = '';
-          for(k in keys)html += '<div>' + '<strong>' + k + ':</strong> ' + shekar[word][k] + '</div>';
+          for(k of keys)html += '<div>' + '<strong>' + k + ':</strong> ' + shekar[word][k] + '</div>';
           document.getElementById('result').innerHTML = html;
         }
         else document.getElementById('result').innerHTML = '<strong>' + word + ' </strong> یافت نشد!';
