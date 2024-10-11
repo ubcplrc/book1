@@ -53,7 +53,11 @@
         <label for="word">واژه:</label>
         <input id="word" size="15" oninput="clearResult()" style="font-family:system-ui;font-size:x-large">
         <input type="button" value="بیاب" onclick="search()" style="font-family:system-ui;font-size:x-large">
-        <p id="result"></p>
+        <table role="presentation" style="width:100%">
+          <tr>
+            <td style="width:30%"><ul id="suggestions"></ul></td>
+            <td id="result" style="width:70%"></td>
+          </tr>
       </div>      
     </main>
   </body>
